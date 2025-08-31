@@ -65,6 +65,23 @@ export default function Index() {
           </section>
         )}
 
+{/* About Section */}
+{!searchQuery && (
+  <section className="py-12 bg-gradient-card rounded-2xl p-8 border shadow-custom-lg text-center max-w-4xl mx-auto">
+    <h2 className="text-3xl font-bold mb-4">About Pathoma Hub</h2>
+    <p className="text-lg text-muted-foreground mb-4">
+      Pathoma Hub is a web app designed to help medical students master pathology.
+      It provides access to all <span className="font-semibold">19 core topics</span> from the Pathoma Pathology series.
+      The platform features interactive video learning, progress tracking, and study tools to enhance your learning experience.
+    </p>
+    <p className="text-sm text-muted-foreground italic">
+      ⚠️ Disclaimer: The videos on this site are sourced from <span className="font-semibold">Pathoma</span>. 
+      All rights and ownership belong to Pathoma.
+    </p>
+  </section>
+)}
+
+
         {/* Continue Watching Section */}
         {!searchQuery && topicsInProgress.length > 0 && (
           <section>
@@ -172,6 +189,11 @@ export default function Index() {
           </section>
         )}
       </div>
+<footer className="w-full text-center p-4 bg-gray-100 dark:bg-gray-900 text-sm text-gray-600 dark:text-gray-400 mt-12">
+  © 2025 Mintesnot Leliso. All rights reserved.
+</footer>
+
+
     </Layout>
   );
 }
